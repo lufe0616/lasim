@@ -142,7 +142,9 @@ public class Drehstrommotor {
     }
 
     public double getStromstaerkeBeiLast(double last) {
-        double p = (last*getDrehzahlBeiLast(last))/(this.getriebeUebersetzung*9550);
-        return p/this.spannung;
+        double pabneu = (last*getDrehzahlBeiLast(last))/(this.getriebeUebersetzung*9550);
+        double pabnennwert = (this.drehmoment*this.drehzahl)/(this.getriebeUebersetzung*9550);
+        double pzuneu = ((this.spannung * this.stromstaerke * this.leistungsfaktor * Math.sqrt(3)) * pabneu )/ (pabnennwert);
+        return pzuneu / (this.spannung * this.leistungsfaktor * Math.sqrt(3));
     }
 }
