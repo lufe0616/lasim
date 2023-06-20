@@ -11,23 +11,23 @@ public class Drehstrommotor {
     private double b = 68.9275;
 
     public Drehstrommotor(int drehzahl, double drehmoment, double spannung, double stromstaerke, double leistungsfaktor, double getriebeUebersetzung, double m, double b) {
-        this.drehzahl = drehzahl;
-        this.drehmoment = drehmoment;
-        this.spannung = spannung;
-        this.stromstaerke = stromstaerke;
-        this.leistungsfaktor = leistungsfaktor;
-        this.getriebeUebersetzung = getriebeUebersetzung;
+        setDrehzahl(drehzahl);
+        setDrehmoment(drehmoment);
+        setSpannung(spannung);
+        setStromstaerke(stromstaerke);
+        setLeistungsfaktor(leistungsfaktor);
+        setGetriebeUebersetzung(getriebeUebersetzung);
         this.m = m;
         this.b = b;
     }
 
     public Drehstrommotor(int drehzahl, double drehmoment, double spannung, double stromstaerke, double leistungsfaktor, double getriebeUebersetzung) {
-        this.drehzahl = drehzahl;
-        this.drehmoment = drehmoment;
-        this.spannung = spannung;
-        this.stromstaerke = stromstaerke;
-        this.leistungsfaktor = leistungsfaktor;
-        this.getriebeUebersetzung = getriebeUebersetzung;
+        setDrehzahl(drehzahl);
+        setDrehmoment(drehmoment);
+        setSpannung(spannung);
+        setStromstaerke(stromstaerke);
+        setLeistungsfaktor(leistungsfaktor);
+        setGetriebeUebersetzung(getriebeUebersetzung);
     }
 
     public Drehstrommotor() {
