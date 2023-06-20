@@ -25,5 +25,10 @@ public class DrehstrommotorMain {
         dm.setGetriebeUebersetzung(sc.nextDouble());
         System.out.print("Bitte Last in Nm eingeben: ");
         dm.setLast(sc.nextDouble());
+
+        sc.close();
+
+        System.out.println("Drehzahl bei Last: " + dm.getDrehzahlBeiLast());
+        System.out.println("Stromstärke bei Last: " + dm.getStromstaerkeBeiLast());
     }
 }
