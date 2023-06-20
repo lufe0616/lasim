@@ -39,7 +39,11 @@ public class Drehstrommotor {
     }
 
     public void setDrehzahl(int drehzahl) {
-        this.drehzahl = drehzahl;
+        if(drehzahl < 0){
+            throw new IllegalArgumentException("Drehzahl darf nicht negativ sein.");
+        }else{
+            this.drehzahl = drehzahl;
+        }
     }
 
     public double getDrehmoment() {
@@ -47,7 +51,11 @@ public class Drehstrommotor {
     }
 
     public void setDrehmoment(double drehmoment) {
-        this.drehmoment = drehmoment;
+        if(drehmoment < 0){
+            throw new IllegalArgumentException("Drehmoment darf nicht negativ sein.");
+        }else{
+            this.drehmoment = drehmoment;
+        }
     }
 
     public double getSpannung() {
@@ -55,7 +63,11 @@ public class Drehstrommotor {
     }
 
     public void setSpannung(double spannung) {
-        this.spannung = spannung;
+        if(drehmoment < 0){
+            throw new IllegalArgumentException("Spannung darf nicht negativ sein.");
+        }else{
+            this.spannung = spannung;
+        }
     }
 
     public double getStromstaerke() {
@@ -63,7 +75,11 @@ public class Drehstrommotor {
     }
 
     public void setStromstaerke(double stromstaerke) {
-        this.stromstaerke = stromstaerke;
+        if(drehmoment < 0){
+            throw new IllegalArgumentException("Spannung darf nicht negativ sein.");
+        }else{
+            this.stromstaerke = stromstaerke;
+        }
     }
 
     public double getLeistungsfaktor() {
@@ -71,7 +87,11 @@ public class Drehstrommotor {
     }
 
     public void setLeistungsfaktor(double leistungsfaktor) {
-        this.leistungsfaktor = leistungsfaktor;
+        if(drehmoment < 0){
+            throw new IllegalArgumentException("Leistungsfaktor darf nicht negativ sein.");
+        }else{
+            this.leistungsfaktor = leistungsfaktor;
+        }
     }
 
     public double getGetriebeUebersetzung() {
@@ -79,7 +99,11 @@ public class Drehstrommotor {
     }
 
     public void setGetriebeUebersetzung(double getriebeUebersetzung) {
-        this.getriebeUebersetzung = getriebeUebersetzung;
+        if(drehzahl < 0){
+            throw new IllegalArgumentException("Getriebeübersetzung darf nicht negativ sein.");
+        }else{
+            this.getriebeUebersetzung = getriebeUebersetzung;
+        }
     }
 
     public double getM() {
