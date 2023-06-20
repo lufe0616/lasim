@@ -121,4 +121,13 @@ public class Drehstrommotor {
     public void setB(double b) {
         this.b = b;
     }
+
+    public double getDrehzahlBeiLast(double last) {
+        return (last-this.b) / this.m;
+    }
+
+    public double getStromstaerkeBeiLast(double last) {
+        double p = (last*getDrehzahlBeiLast(last))/(this.getriebeUebersetzung*9550);
+        return p/this.spannung;
+    }
 }
