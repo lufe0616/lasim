@@ -1,3 +1,5 @@
+package calc;
+
 public class Drehstrommotor {
 
     private int drehzahl;
@@ -146,5 +148,13 @@ public class Drehstrommotor {
         double pabnennwert = (this.drehmoment*this.drehzahl)/(this.getriebeUebersetzung*9550);
         double pzuneu = ((this.spannung * this.stromstaerke * this.leistungsfaktor * Math.sqrt(3)) * pabneu )/ (pabnennwert);
         return pzuneu / (this.spannung * this.leistungsfaktor * Math.sqrt(3));
+    }
+
+    public double getPAuf() {
+        return this.spannung * this.stromstaerke * this.leistungsfaktor * Math.sqrt(3);
+    }
+
+    public double getPAb() {
+        return (this.drehmoment * this.drehzahl) / (this.getriebeUebersetzung * 9550);
     }
 }
